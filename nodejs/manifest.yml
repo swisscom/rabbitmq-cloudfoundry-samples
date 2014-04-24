@@ -6,8 +6,4 @@ applications:
   host: rabbitmq-node-${random-word}
   path: .
   services:
-    rabbit-sample:
-      label: cloudamqp
-      provider: cloudamqp
-      version: n/a
-      plan: lemur
+    - rabbit-sample
