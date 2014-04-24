@@ -6,8 +6,4 @@ applications:
   host: rabbitmq-sinatra-${random-word}
   path: .
   services:
-    rabbit-sinatra:
-      label: cloudamqp
-      provider: cloudamqp
-      version: n/a
-      plan: lemur
+    - rabbit-sample
