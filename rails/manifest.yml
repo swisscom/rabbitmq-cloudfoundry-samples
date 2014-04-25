@@ -6,4 +6,4 @@ applications:
   host: rabbitmq-rails-${random-word}
   path: .
   services:
-    - rabbit-rails
+    - rabbit-sample
