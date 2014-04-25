@@ -8,9 +8,11 @@ function rabbitUrl() {
     var svcInfo = JSON.parse(process.env.VCAP_SERVICES);
     for (var label in svcInfo) {
       var svcs = svcInfo[label];
-      var url = svcs[0].credentials.url;
-      if (url.lastIndexOf("amqp", 0) == 0) {
-        return url;
+      for (var index in svcs) {
+        var uri = svcs[index].credentials.uri;
+        if (uri.lastIndexOf("amqp", 0) == 0) {
+          return uri;
+        }
       }
     }
     return null;
